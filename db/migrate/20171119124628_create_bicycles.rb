@@ -4,8 +4,6 @@ class CreateBicycles < ActiveRecord::Migration
       t.string :title
       t.text :description
       t.float :price
-
-      t.timestamps null: false
     end
   end
 end
