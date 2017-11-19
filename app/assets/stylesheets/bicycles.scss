@@ -1,5 +1,75 @@
 // Place all the styles related to the Bicycles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|Open+Sans');
+$navbar-default-bg: #DD4124;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo {
+  float: left;
+  font-family: 'Libre Barcode 39 Text', cursive;
+  font-size: 2.5em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.jumbotron {
+  font-family: 'Libre Barcode 39 Text', cursive;
+  #background-color: #fff;
+  background-image: asset-url('759px-Schwinn_StingRay_OrangeKrate_5speed_1968.jpg');
+  background-size:cover;
+  height: 600px;
+  
+  h1 {
+    text-align: center;
+    #font-weight: bold;
+    letter-spacing:-1px;
+    #padding: 5px 5px 5px 15px;
+    font-size: 60px;
+    margin-bottom: 30px;
+  }
+  
+  .btn-xlarge{
+    font-size: 1.5em;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    background-color: #000;
+  }
+}
+  footer {
+    margin-top: 45px;
+    padding-top: 5px;
+    border-top: 1px solid #eaeaea;
+    color: #777;
+  }
+  
+  footer a:hover {
+    color: #222;
+  }
+  
+  footer small {
+    float: left;
+  }
+  
+  footer ul {
+    float: right;
+    list-style: none;
+  }
+  
+  footer ul li {
+    float: left;
+    margin-left: 15px;
+  }
