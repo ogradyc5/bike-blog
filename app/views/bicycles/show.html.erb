@@ -1,22 +1,20 @@
-<h1>Selected Bicycle</h1>
-
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @bicycle.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @bicycle.description %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @bicycle.price %>
-</p>
-
-<%= link_to 'Edit', edit_bicycle_path(@bicycle) %> |
-<%= link_to 'Back to Bicycles', bicycles_path %> |
-<%= link_to 'Home', root_path %>
+<h2 align="center"><strong>Title: <%= @bicycle.title %></strong></h2>
+<div class="well col-xs-8 col-xs-offset-2">
+  <h4 class="center description">
+    <strong>Description:</strong>
+  </h4>
+  <hr>
+    <%= simple_format(@bicycle.description) %>
+  <h4 class="center price">
+    <strong>Price:</strong>
+  </h4>
+  <hr>
+    <%= @bicycle.price %>
+    
+  <div class="article-actions">
+<%= link_to "Edit this bicycle", edit_bicycle_path(@bicycle), class: "btn btn-xs btn-primary" %>
+<%= link_to "Delete this bicycle", bicycle_path(@bicycle), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-xs btn-danger" %> 
+<%= link_to 'View all Bikes', bicycles_path, class: "btn btn-xs btn-success" %>
+<!--%= link_to 'Home', root_path %-->
+  </div>
+</div>

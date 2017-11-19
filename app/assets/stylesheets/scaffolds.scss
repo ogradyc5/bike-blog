@@ -42,6 +42,24 @@ div {
   }
 }
 
+.article-actions {
+  margin-top: 20px;
+
+  .btn {
+    color:#fff;
+    margin-left: 72px;
+  }
+  .description{
+    margin-top: 0px;
+  }
+  .hr {
+    float:center;
+  }
+  .price{
+    margin-bottom: 5px;
+  }
+}
+  
 #notice {
   color: green;
 }
