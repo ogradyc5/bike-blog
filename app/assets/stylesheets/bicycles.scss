@@ -18,7 +18,7 @@ $navbar-default-bg: #DD4124;
 }
 
 #logo:hover {
-  color: #fff;
+  color: black;
   text-decoration: none;
 }
 
@@ -28,8 +28,8 @@ $navbar-default-bg: #DD4124;
 
 .jumbotron {
   font-family: 'Libre Barcode 39 Text', cursive;
-  #background-color: #fff;
-  background-image: asset-url('759px-Schwinn_StingRay_OrangeKrate_5speed_1968.jpg');
+  background-color: #fff;
+  #background-image: asset-url('759px-Schwinn_StingRay_OrangeKrate_5speed_1968.jpg');
   background-size:cover;
   height: 600px;
   
@@ -44,9 +44,10 @@ $navbar-default-bg: #DD4124;
   
   .btn-xlarge{
     font-size: 1.5em;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Bungee Inline', cursive;
     color: #fff;
     background-color: #000;
+    border: #fff;
   }
 }
   footer {
@@ -71,5 +72,5 @@ $navbar-default-bg: #DD4124;
   
   footer ul li {
     float: left;
-    margin-left: 15px;
+    margin-left: 15px;;
   }

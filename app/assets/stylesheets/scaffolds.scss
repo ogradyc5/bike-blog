@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|Open+Sans|Bungee+Inline');
 
 
 
 body {
   background-color: #fff;
   color: #333;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Bungee Inline', cursive;
   font-size: 13px;
   line-height: 18px;
 }
 
 p, ol, ul, td {
-  font-family: Open Sans;
+  font-family: 'Bungee Inline', cursive;
   font-size: 13px;
   line-height: 18px;
 }
@@ -31,7 +31,7 @@ a {
   }
 
   &:hover {
-    color: #fff;
+    color: black;
     background-color: #fff;
   }
 }
@@ -68,8 +68,8 @@ div {
     font-size: 12px;
     margin: -7px;
     margin-bottom: 0px;
-    background-color: #c00;
-    color: #fff;
+    background-color: #fff;
+    color: black;
   }
 
   ul li {
