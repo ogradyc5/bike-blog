@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>My Home</title>
+	
+	<meta name="author" content="catherine" />
+	<meta name="description" content="" />
+
+<!-- you should always add your stylesheet (css) in the head tag so that it starts loading before the page html is being displayed -->	
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	
+</head>
+<body>
+
+	<div id="page">
+		<div id="logo">
+			<h1><a href="/" id="logoLink">CycleShed</a></h1>
+		</div>
+		<div id="nav">
+			<ul>
+				<li><a href="#/home.html">Home</a></li>
+				<!--li><a href="#/about.html">About</a></li-->
+				<%= link_to 'About', about_path %>
+				<li><a href="#/contact.html">Contact</a></li>
+			</ul>	
+		</div>
+		<div id="content">
+			<h2>Home</h2>
+			<p>
+				You're at home with The CycleShed! Watch out world of Racing, here we come!
+			</p>
+			<p> 
+				Eat 🚲 Sleep 🚲 Race 🚲 Repeat
+			</p>
+		</div>
+		<div id="footer">
+			<p>
+				Webpage made by <a href="/" target="_blank">catherine</a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>
