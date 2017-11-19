@@ -10,6 +10,7 @@ class BicyclesController < ApplicationController
   # GET /bicycles/1
   # GET /bicycles/1.json
   def show
+    @bicycle = Bicycle.find(params[:id])
   end
 
   # GET /bicycles/new
