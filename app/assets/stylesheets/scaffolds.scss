@@ -15,10 +15,11 @@ body {
 
 p, ol, ul, td {
   font-family: 'Bungee Inline', cursive;
-  font-size: 13px;
+  font-size: 11px;
   line-height: 18px;
   color: #333;
 }
+
 
 pre {
   background-color: #eee;
@@ -37,7 +38,7 @@ a {
   }
 
   &:hover {
-    color: #fff;
+    color: #333;
     background-color: #fff;
   }
 }
@@ -51,12 +52,13 @@ div {
 .article-actions {
   margin-top: 20px;
 
-  .btn {
-    color:#fff;
-    margin-left: 72px;
-  }
+    .btn{
+      color: white;
+      font-size: 0.85em;
+    }
    .description{
     margin-top: 0px;
+    
   }
   .hr {
     float:center;
@@ -67,7 +69,7 @@ div {
 }
 
 .article-actions-show {
-  margin-top: 20px;
+  margin-top: 10px;
 
   .btn {
     color:#fff;

@@ -58,6 +58,7 @@ $navbar-default-bg: #DD4124;
     margin-top: 50px;
   }
 }
+
   footer {
     margin-top: 45px;
     padding-top: 5px;
@@ -84,12 +85,18 @@ $navbar-default-bg: #DD4124;
   }
   
   .bicycle-title {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     text-align:center;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 15px;
   }
   
   .bicycle-body-price{
     font-weight: bold;
+  }
+  
+  h4 {
+    #price {
+      margin-top: 30px;
+    }
   }
