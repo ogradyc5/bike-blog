@@ -1,7 +1,7 @@
 // Place all the styles related to the Bicycles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text|Open+Sans|Libre+Barcode+39+Extended+Text|Libre+Barcode+128|Libre+Barcode+39|Bungee+Inline');
 $navbar-default-bg: #DD4124;
 
 @import "bootstrap-sprockets";
@@ -27,7 +27,7 @@ $navbar-default-bg: #DD4124;
 }
 
 .jumbotron {
-  font-family: 'Libre Barcode 39 Text', cursive;
+  font-family: 'Libre Barcode 39', cursive;
   background-color: #fff;
   #background-image: asset-url('759px-Schwinn_StingRay_OrangeKrate_5speed_1968.jpg');
   background-size:cover;
@@ -35,19 +35,27 @@ $navbar-default-bg: #DD4124;
   
   h1 {
     text-align: center;
-    #font-weight: bold;
+    font-weight: bold;
     letter-spacing:-1px;
     #padding: 5px 5px 5px 15px;
     font-size: 60px;
     margin-bottom: 30px;
   }
-  
+  .second {
+      font-family: 'Bungee Inline', cursive;
+      font-size: 50px;
+      letter-spacing:3px;
+      word-spacing: 3px;
+    }
   .btn-xlarge{
     font-size: 1.5em;
     font-family: 'Bungee Inline', cursive;
     color: #fff;
-    background-color: #000;
+    background-color: #333;
     border: #fff;
+    font-weight: bold;
+    margin-left: -47px;
+    margin-top: 50px;
   }
 }
   footer {
@@ -72,11 +80,16 @@ $navbar-default-bg: #DD4124;
   
   footer ul li {
     float: left;
-    margin-left: 15px;;
+    margin-left: 15px;
   }
   
   .bicycle-title {
     margin-bottom: 20px;
     text-align:center;
+    font-weight: bold;
+    font-size: 12px;
   }
   
+  .bicycle-body-price{
+    font-weight: bold;
+  }
