@@ -1,8 +1,8 @@
-<p id="notice"><%= notice %></p>
+<!--p id="notice"><!--%= notice %--></p-->
 
-<h1>Listing Bicycles</h1>
+<h1 align="center">Listing Bicycles</h1>
 
-<table>
+<!--table>
   <thead>
     <tr>
       <th>Title</th>
@@ -12,21 +12,33 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody-->
     <% @bicycles.each do |bicycle| %>
-      <tr>
-        <td><%= bicycle.title %></td>
-        <td><%= bicycle.description %></td>
-        <td><%= bicycle.price %></td>
-        <td><%= link_to 'Show', bicycle %></td>
-        <td><%= link_to 'Edit', edit_bicycle_path(bicycle) %></td>
-        <td><%= link_to 'Destroy', bicycle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <div class='row'>
+      <div class='col-xs-8 col-xs-offset-2'>
+        <div class="well well-lg">
+          <div class="bicycle-title">
+            <%= link_to bicycle.title, bicycle_path(bicycle) %>
+          </div>
+          <div class="bicycle-body">
+            <%= bicycle.description%>
+            <%= bicycle.price%>
+          </div>
+          <div class="article-actions-show">
+            <%= link_to "Edit this bicycle", edit_bicycle_path(bicycle), class: "btn btn-xs btn-primary" %>
+            <%= link_to "Delete this bicycle", bicycle_path(bicycle), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-xs btn-danger" %> 
+            <!--%= link_to 'View all Bikes', bicycles_path, class: "btn btn-xs btn-success" %>
+            <!--%= link_to 'Home', root_path %-->
+          </div>
+            <!--td><!--%= link_to 'Show', bicycle %--><!--/td-->
+            <!--td><!--%= link_to 'Edit', edit_bicycle_path(bicycle) %--><!--/td>
+            <!--td><!--%= link_to 'Destroy', bicycle, method: :delete, data: { confirm: 'Are you sure?' } %--></td-->
+        </div>
+      </div>
+    </div>
+<% end %>
 
-<br>
+<!--br>
 
-<%= link_to 'New Bicycle', new_bicycle_path %> |
-<%= link_to 'Home', root_path %>
+<!--%= link_to 'New Bicycle', new_bicycle_path %> |
+<!--%= link_to 'Home', root_path %>

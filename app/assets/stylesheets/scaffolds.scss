@@ -9,6 +9,7 @@ body {
   font-family: 'Bungee Inline', cursive;
   font-size: 13px;
   line-height: 18px;
+  text-align: justify;
 }
 
 p, ol, ul, td {
@@ -27,12 +28,13 @@ a {
   color: #333;
 
   &:visited {
-    color: #666;
+    #color: #006dcc;
+    color:#8A2BE2;
   }
 
   &:hover {
-    color: black;
-    background-color: #fff;
+    color: #fff;
+    background-color: black;
   }
 }
 
@@ -49,14 +51,22 @@ div {
     color:#fff;
     margin-left: 72px;
   }
-  .description{
+   .description{
     margin-top: 0px;
   }
   .hr {
     float:center;
   }
-  .price{
+   .price{
     margin-bottom: 5px;
+  }
+}
+
+.article-actions-show {
+  margin-top: 20px;
+
+  .btn {
+    color:#fff;
   }
 }
   
