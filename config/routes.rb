@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   resources :bikes
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  get 'signup', to: 'users#new'
+  resources :users, except: [:new]
+  post 'users', to: 'users#create'
+  #resources :users, except: [:new]
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
