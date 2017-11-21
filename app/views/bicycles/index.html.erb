@@ -12,8 +12,12 @@
           </div>
           <div class="bicycle-body">
             <%= bicycle.description %><br><br><br>
+            
             <div class="bicycle-body-price", align="center">
               <%= bicycle.price %>
+              <div class="bicycle-meta-details">
+                <small> Created by: <%= bicycle.user.username if bicycle.user %>, <%= time_ago_in_words(bicycle.created_at) %> ago, last updated: <%= time_ago_in_words(bicycle.updated_at) %> ago </small>
+              </div>
             </div>
           </div>
           <div class="article-actions-show", align="center">
