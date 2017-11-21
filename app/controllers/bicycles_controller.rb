@@ -25,8 +25,9 @@ class BicyclesController < ApplicationController
   # POST /bicycles
   # POST /bicycles.json
   def create
+    debugger
     @bicycle = Bicycle.new(bicycle_params)
-
+    @bicycle.user = User.first
     respond_to do |format|
       if @bicycle.save
         format.html { redirect_to @bicycle, notice: 'Bicycle was successfully created.' }
