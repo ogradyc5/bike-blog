@@ -1,0 +1,34 @@
+  
+<tbody-->
+  <% obj.each do |bicycle| %>
+    <div class='row'>
+      <div class='col-xs-8 col-xs-offset-2'>
+        <div class="well well-lg">
+          <div class= "bicycle-title">
+            <%= link_to bicycle.title, bicycle_path(bicycle) %>
+          </div>
+          <div class="bicycle-body">
+            <%= bicycle.description %><br><br><br>
+            
+            <div class="bicycle-body-price", align="center">
+              <%= bicycle.price %>
+              <div class="bicycle-meta-details">
+                <small> Created by: <%= bicycle.user.username if bicycle.user %>, <%= time_ago_in_words(bicycle.created_at) %> ago, last updated: <%= time_ago_in_words(bicycle.updated_at) %> ago </small>
+              </div>
+            </div>
+          </div>
+          <div class="article-actions-show", align="center">
+            <%= link_to "Edit this bicycle", edit_bicycle_path(bicycle), class: "btn btn-xs btn-primary" %>
+            <%= link_to "Delete this bicycle", bicycle_path(bicycle), method: :delete, data: { confirm: "Are you sure you want to delete this entry?"}, class: "btn btn-xs btn-danger" %> 
+            <!--%= link_to 'View all Bikes', bicycles_path, class: "btn btn-xs btn-success" %>
+            <!--%= link_to 'Home', root_path %-->
+          </div>
+        </div>
+      </div>
+    </div>
+<% end %>
+
+<!--br>
+
+<!--%= link_to 'New Bicycle', new_bicycle_path %> |
+<!--%= link_to 'Home', root_path %>
