@@ -1,18 +1,22 @@
 class BicyclesController < ApplicationController
   before_action :set_bicycle, only: [:show, :edit, :update, :destroy]
-
-  # GET /bicycles
-  # GET /bicycles.json
+  before_action :require_user, except: [:index, :show]
+  before_action :require_same_user, only: [:edit, :update, :destroy]
+  
   def index
     @bicycles = Bicycle.paginate(page: params[:page], per_page: 3)
   end
 
-  # GET /bicycles/1
-  # GET /bicycles/1.json
   def show
     @bicycle = Bicycle.find(params[:id])
   end
-
+  
+  def require_same_user
+    if current_user != @bicycle.user
+      flash[:danger] = "You can only update or delete personal items"
+      redirect_to root_path
+    end
+  end 
   # GET /bicycles/new
   def new
     @bicycle = Bicycle.new
@@ -22,8 +26,6 @@ class BicyclesController < ApplicationController
   def edit
   end
 
-  # POST /bicycles
-  # POST /bicycles.json
   def create
     debugger
     @bicycle = Bicycle.new(bicycle_params)
@@ -39,8 +41,6 @@ class BicyclesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /bicycles/1
-  # PATCH/PUT /bicycles/1.json
   def update
     respond_to do |format|
       if @bicycle.update(bicycle_params)
@@ -53,8 +53,6 @@ class BicyclesController < ApplicationController
     end
   end
 
-  # DELETE /bicycles/1
-  # DELETE /bicycles/1.json
   def destroy
     @bicycle.destroy
     respond_to do |format|
