@@ -4,7 +4,7 @@ class BicyclesController < ApplicationController
   # GET /bicycles
   # GET /bicycles.json
   def index
-    @bicycles = Bicycle.all
+    @bicycles = Bicycle.paginate(page: params[:page], per_page: 3)
   end
 
   # GET /bicycles/1
