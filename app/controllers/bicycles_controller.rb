@@ -29,7 +29,7 @@ class BicyclesController < ApplicationController
   def create
     debugger
     @bicycle = Bicycle.new(bicycle_params)
-    @bicycle.user = User.first
+    @bicycle.user = current_user
     respond_to do |format|
       if @bicycle.save
         format.html { redirect_to @bicycle, notice: 'Bicycle was successfully created.' }
