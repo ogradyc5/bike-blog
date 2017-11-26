@@ -28,7 +28,7 @@
     <%= @bicycle.price %>
 
   <div class="article-actions", align="center">
-    <% if logged_in? && current_user == @bicycle.user %>
+    <% if logged_in? && (current_user == @bicycle.user || current_user.admin?) %>
       <hr>
         <%= link_to "Edit this bicycle", edit_bicycle_path(@bicycle), class: "btn btn-xs btn-primary" %>
         <%= link_to "Delete this bicycle", bicycle_path(@bicycle), method: :delete, data: { confirm: "Are you sure you want to delete this entry?"}, class: "btn btn-xs btn-danger" %> 

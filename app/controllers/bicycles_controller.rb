@@ -12,17 +12,17 @@ class BicyclesController < ApplicationController
   end
   
   def require_same_user
-    if current_user != @bicycle.user
+    if current_user != @bicycle.user and !current_user.admin?
       flash[:danger] = "You can only update or delete personal items"
       redirect_to root_path
     end
   end 
-  # GET /bicycles/new
+  
   def new
     @bicycle = Bicycle.new
   end
 
-  # GET /bicycles/1/edit
+  
   def edit
   end
 
