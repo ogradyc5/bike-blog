@@ -27,7 +27,7 @@ class BicyclesController < ApplicationController
   end
 
   def create
-    debugger
+    
     @bicycle = Bicycle.new(bicycle_params)
     @bicycle.user = current_user
     respond_to do |format|
@@ -69,6 +69,6 @@ class BicyclesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bicycle_params
-      params.require(:bicycle).permit(:title, :description, :price)
+      params.require(:bicycle).permit(:title, :description, :price, category_ids: [])
     end
 end

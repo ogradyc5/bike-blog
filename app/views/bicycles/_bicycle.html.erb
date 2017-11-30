@@ -17,6 +17,9 @@
               </div>
             </div>
           </div>
+          <% if bicycle.categories.any? %>
+            <p>Categories: <%= render bicycle.categories %></p>
+          <% end %>
           <% if logged_in? && (current_user == bicycle.user || current_user.admin?) %>
             <div class="article-actions-show", align="center">
               <%= link_to "Edit this bicycle", edit_bicycle_path(bicycle), class: "btn btn-xs btn-primary" %>
